@@ -2,8 +2,8 @@ IsTimerStart := 0
 
 ; define default Alarm values 
 AlarmHours := 0
-AlarmMinutes := 49
-AlarmSeconds := 5
+AlarmMinutes := 50
+AlarmSeconds := 0
 
 ; calculate all Alarm values into seconds
 CalcAlarmSeconds()
@@ -79,4 +79,12 @@ F6::
 F7::
 {
 	Reload
+}
+
+; Create GUI window
+F8::
+{
+	MyGui := Gui(, "Productivity App", )
+	MyGui.AddText(, "Current alarm:")
+	MyGui.Show()
 }
